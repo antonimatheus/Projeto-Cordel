@@ -9,6 +9,13 @@
 }
 
 :root {
+    --cor0: #f5deb3;
+    --cor1: #F2CD13;
+    --cor2: #F2B90F;
+    --cor3: #F2A413;
+    --cor4: #BF2B0A;
+    --cor5: #0D0D0D;
+
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte2: 'Passion One', cursive;
     --fonte3: 'Sriracha', cursive;
@@ -16,15 +23,14 @@
 
 html, body {
     width: 100vw;
-    background-color: lightgray;
-    background-color: white;
+    background-color:var(--cor0);
     font-family: var(--fonte1);
     text-align: justify;
     overflow-x: hidden;
 }
 
 header {
-    background-color: black;
+    background-image: linear-gradient(to top, var(--cor1), var(--cor3));
     color: white;
     font-family: var(--fonte2);
     padding: 90px;
@@ -39,16 +45,18 @@ header > h1 {
 
 header > p {
     font-family: var(--fonte1);
-    font-size: 1.5em;
+    font-size: 3vw;
 }
 
 header > p > a {
     font-weight: bold;
     text-decoration: none;
     color: white;
+    transition: 0.5s;
 }
 
 header > p > a:hover {
+    color: var(--cor4);
     text-decoration: underline;
 }
 
@@ -82,6 +90,8 @@ section.imagem {
 
 section.imagem > p {
     background-color: rgba(0, 0, 0, 0.400);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
     display: inline-block;
     padding: 20px;
     text-shadow: 3px 3px 7px black;
@@ -103,7 +113,7 @@ section#img02 {
 }
 
 footer {
-    background-color: black;
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor3));
     color: white;
     padding: 15px;
     text-align: center;
@@ -120,8 +130,10 @@ footer > p > a {
     color: white;
     font-weight: bold;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 footer > p > :hover {
     text-decoration: underline;
+    color: var(--cor4);
 }
